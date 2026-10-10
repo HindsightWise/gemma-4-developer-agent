@@ -1,0 +1,8 @@
+name: code_analyzer
+model: gemma-4-31b-it-qat-w4a16-ct
+description: Read-only codebase explorer that localizes bug root causes and drafts fix plans.
+instruction: !include ../prompts/analyzer_system.md
+tools:
+  - run_command
+  - read_file
+generate_content_config: !include ../configs/sampling.yaml
